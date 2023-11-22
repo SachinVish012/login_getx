@@ -17,6 +17,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     print("-------------rebuild---------");
     return Scaffold(
+        resizeToAvoidBottomInset: false,
       body: Center(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 22),
@@ -45,7 +46,10 @@ class _HomePageState extends State<HomePage> {
                 child: Container(
                   height: 45,
                     color: Colors.grey,
-                    child: Center(child: Text("Login"))),
+                    child: Center(
+                        child: Text("Login")
+                    )
+                ),
               )
             ],
           ),

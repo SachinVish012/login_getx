@@ -1,11 +1,9 @@
 import 'dart:convert';
-
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart';
 
 class LoginController extends GetxController{
-
   final  emailController=TextEditingController().obs;
   final  passController=TextEditingController().obs;
 
@@ -18,15 +16,15 @@ class LoginController extends GetxController{
         "password": passController.value.text
       });
       print("222");
-      var body=jsonDecode(response.body);
-      print(body);
+      var body1=jsonDecode(response.body);
+      print(body1);
       if(response.statusCode==200)
         {
           Get.snackbar("Login Successful", "Congratulations");
         }
       else
         {
-          Get.snackbar("Login Failed", "Failed");
+          Get.snackbar("Login Failed", body1["error"].toString());
         }
     }
     catch(e){
