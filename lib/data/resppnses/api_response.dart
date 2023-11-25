@@ -1,4 +1,3 @@
-
 import 'package:login_getx/data/resppnses/status.dart';
 
 class APIResponse<T>{
@@ -7,7 +6,6 @@ class APIResponse<T>{
   String? message;
 
   APIResponse(this.status,this.data,this.message);
-
   APIResponse.loading(): status=Status.Loading;
   APIResponse.done():status=Status.Done;
   APIResponse.error():status=Status.Error;
