@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:login_getx/resources/routes/routes.dart';
 import 'package:login_getx/view/view_screen1.dart';
 
 void main() {
@@ -12,6 +13,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       home: HomeView(),
+       getPages: AppRoutes.appRoutes(),
     );
   }
 }
