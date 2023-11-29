@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:login_getx/resources/image_assets/image_assets.dart';
 import 'package:login_getx/utils/utils.dart';
 
 class HomeView extends StatefulWidget {
@@ -8,6 +8,7 @@ class HomeView extends StatefulWidget {
 }
 
 class _HomeViewState extends State<HomeView> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,7 +19,9 @@ class _HomeViewState extends State<HomeView> {
         },
       ),
       body: Center(
-        child: Text('email'.tr),
+        child: Image(
+          image: AssetImage(ImageAsstes.img1),
+        )
       ),
     );
   }

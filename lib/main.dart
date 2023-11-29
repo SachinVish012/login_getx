@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:login_getx/resources/getx_localization/language.dart';
 import 'package:login_getx/resources/routes/routes.dart';
@@ -19,7 +18,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       translations: Language(),
-      locale: Locale('Hi','Ind'),
+      locale: Locale('en','US'),
       fallbackLocale: Locale('en','US'),
       debugShowCheckedModeBanner: false,
       home: HomeView(),
